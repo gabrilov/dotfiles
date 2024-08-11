@@ -43,6 +43,7 @@
       "g r": "editor::Rename",
       "space w": "workspace::Save",
       ", g b": "editor::ToggleGitBlame"
+
     }
   }
 ]
