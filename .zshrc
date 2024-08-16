@@ -33,9 +33,9 @@ check_and_source ~/.aliases
 
 ### Environment variables ###
 [ -f /usr/bin/nvim ] && export EDITOR=nvim  # Default editor
-[ -d "$HOME/.local/bin" ] && \  # PATH variable
+[ -d "$HOME/.local/bin" ] && \
     [[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && \
-    export PATH="$HOME/.local/bin:$PATH"
+    export PATH="$HOME/.local/bin:$PATH" # PATH variable
 
 ### Terminal ###
 check_and_source ~/.zsh-config # Use powerline
