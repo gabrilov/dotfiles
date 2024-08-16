@@ -43,3 +43,4 @@ function space() {
 alias sudo="sudo "
 alias busca="pacman -Ss"
 alias buscaur="yay -Ssa"
+alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'

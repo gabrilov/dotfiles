@@ -8,21 +8,14 @@
 HISTFILE=~/.zhistory
 HISTSIZE=1000
 SAVEHIST=1000
+HISTDUP=erase
 setopt appendhistory
-
-# Color para ls
-if ${use_color} ; then
-	# Enable colors for ls, etc.  Prefer ~/.dir_colors #64489
-	if type -p dircolors >/dev/null ; then
-		if [[ -f ~/.dir_colors ]] ; then
-			eval $(dircolors -b ~/.dir_colors)
-		elif [[ -f /etc/DIR_COLORS ]] ; then
-			eval $(dircolors -b /etc/DIR_COLORS)
-		fi
-	fi
-fi
-
-# export LS_COLORS=$LS_COLORS
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
 
 # Use powerline
 if [[ -e ~/.zsh-config ]]; then
@@ -30,46 +23,23 @@ if [[ -e ~/.zsh-config ]]; then
 fi
 
 # Plugins
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-#source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.local/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.local/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.config/powerlevel10k/powerlevel10k.zsh-theme # Prompt theming
 
 # Alias
 [ -f $HOME/.aliases ] && . $HOME/.aliases
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Variables de entorno
-export EDITOR=nvim
+# Environment variables
+[ -f /usr/bin/nvim ] && export EDITOR=nvim
 
-# Variable para arreglar problema con TOR
-# export QT_QPA_PLATFORM=wayland
-#
-# Problema Firefox is alredy running
-# export MOZ_DBUS_REMOTE = 1
+# Terminal
+source ~/.config/zellij/zellij_zsh.sh # load Zellij if exists
+source ~/.config/tmux/tmux_zsh.sh # load Tmux if exists
+source ~/.config/poetry/poetry_zsh.sh # poetry autocompletion
 
-# Golang
-# export GOPATH=$HOME/.go
-# export PATH=$PATH:$GOPATH/bin
+# Path
+[ -d "$HOME/.local/bin" ] && \
+    [[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && \
+    export PATH="$HOME/.local/bin:$PATH"
 
-# Starship
-#eval "$(starship init zsh)"
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Zellij autostart
-export ZELLIJ_AUTO_EXIT=true
-[ $TERM = "xterm-256color" ] && [ ! -n "$SSH_CLIENT" ] && [ $EUID -ne 0 ] && eval "$(zellij setup --generate-auto-start zsh)"
-eval "$(zoxide init --cmd cd zsh)"
-
-# PATH
-# set PATH so it includes user's private ~/.local/bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
-# Poetry autocompletion
-fpath+=~/.zfunc
-autoload -Uz compinit && compinit
