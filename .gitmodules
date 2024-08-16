@@ -1,9 +1,0 @@
-[submodule "/home/gabi/.config/zsh/zsh-autosuggestions"]
-	path = /home/gabi/.config/zsh/zsh-autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions.git
-[submodule "/home/gabi/.config/zsh/zsh-syntax-highlighting"]
-	path = /home/gabi/.config/zsh/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule ".config/powerlevel10k"]
-	path = .config/powerlevel10k
-	url = https://github.com/romkatv/powerlevel10k.git
