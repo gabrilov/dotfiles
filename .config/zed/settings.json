@@ -1,0 +1,35 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `zed: Open Default Settings` command
+// from the command palette
+{
+  "vim_mode": true,
+  "ui_font_size": 17,
+  "buffer_font_size": 17,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "VScode Dark Plus"
+  },
+  "terminal": {
+    "toolbar": {
+      "title": false
+    }
+  },
+  "inlayHints": {
+    "maxLength": null,
+    "lifetimeElisionHints": {
+      "useParameterNames": true,
+      "enable": "skip_trivial"
+    },
+    "closureReturnTypeHints": {
+      "enable": "always"
+    }
+  },
+  "relative_line_numbers": true,
+  "ui_font_family": "JetBrainsMonoNF-Medium"
+}
