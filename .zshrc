@@ -1,10 +1,11 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-#fi
+#      _____  ____    _   _   ____     ____
+#     |__  / / ___|  | | | | |  _ \   / ___|
+#       / /  \___ \  | |_| | | |_) | | |
+#  _   / /_   ___) | |  _  | |  _ <  | |___
+# (_) /____| |____/  |_| |_| |_| \_\  \____|
 
+
+### History ###
 HISTFILE=~/.zhistory
 HISTSIZE=1000
 SAVEHIST=1000
@@ -17,29 +18,29 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-# Use powerline
-if [[ -e ~/.zsh-config ]]; then
-  source ~/.zsh-config
-fi
+### Aux function ###
+check_and_source() {
+    [[ -f $1 ]] && source $1
+}
 
-# Plugins
-source ~/.local/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.local/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.config/powerlevel10k/powerlevel10k.zsh-theme # Prompt theming
+### Plugins ###
+check_and_source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+check_and_source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+check_and_source ~/.config/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme # Prompt theming
 
-# Alias
-[ -f $HOME/.aliases ] && . $HOME/.aliases
+### Alias ###
+check_and_source ~/.aliases
 
-# Environment variables
-[ -f /usr/bin/nvim ] && export EDITOR=nvim
-
-# Terminal
-source ~/.config/zellij/zellij_zsh.sh # load Zellij if exists
-source ~/.config/tmux/tmux_zsh.sh # load Tmux if exists
-source ~/.config/poetry/poetry_zsh.sh # poetry autocompletion
-
-# Path
-[ -d "$HOME/.local/bin" ] && \
+### Environment variables ###
+[ -f /usr/bin/nvim ] && export EDITOR=nvim  # Default editor
+[ -d "$HOME/.local/bin" ] && \  # PATH variable
     [[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && \
     export PATH="$HOME/.local/bin:$PATH"
 
+### Terminal ###
+check_and_source ~/.zsh-config # Use powerline
+check_and_source ~/.config/zellij/zellij_zsh.sh # load Zellij if exists
+check_and_source ~/.config/tmux/tmux_zsh.sh # load Tmux if exists
+check_and_source ~/.config/poetry/poetry_zsh.sh # poetry autocompletion
+check_and_source ~/.config/kitty/kitty_zsh.sh # load Kitty configuration
+check_and_source ~/.p10k.zsh # load p10k config
