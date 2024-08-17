@@ -18,8 +18,12 @@
 # I put the file alacritty.toml in $HOME/.config/alacritty. However it can be kept anywhere among the places mentioned in
 # https://github.com/alacritty/alacritty/tree/master#configuration
 
+import = [
+    "~/.config/alacritty/themes/pastel_dark.toml"
+]
+
 #[window]
-#opacity = 0.9
+#opacity = 0.95
 #padding.x = 10
 #padding.y = 10
 #decorations = "Full"
@@ -51,7 +55,6 @@ thickness = 0.15
 
 [mouse]
 hide_when_typing = true
-
 
 
 # Tip: for inspiration, look for values in the source code files of your favorite VS Code themes, and use the color picker in
