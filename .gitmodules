@@ -7,3 +7,6 @@
 [submodule "/home/gabi/.config/zsh/plugins/zsh-autosuggestions"]
 	path = /home/gabi/.config/zsh/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "/home/gabi/.config/tmux/plugins/catppuccin"]
+	path = /home/gabi/.config/tmux/plugins/catppuccin
+	url = https://github.com/catppuccin/tmux.git
