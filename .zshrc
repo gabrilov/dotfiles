@@ -41,7 +41,7 @@ export ELECTRON_OZONE_PLATFORM_HINT=auto # Compatibilidad electron con Wayland
 ### Terminal ###
 check_and_source ~/.zsh-config # Use powerline
 check_and_source ~/.config/zellij/zellij_zsh.sh # load Zellij if exists
-heck_and_source ~/.config/poetry/poetry_zsh.sh # poetry autocompletion
+check_and_source ~/.config/poetry/poetry_zsh.sh # poetry autocompletion
 check_and_source ~/.config/kitty/kitty_zsh.sh # load Kitty configuration
 check_and_source ~/.config/zoxide/zoxide_zsh.sh # load zoxide configuration
 check_and_source ~/.p10k.zsh # load p10k config
