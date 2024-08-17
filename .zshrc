@@ -36,6 +36,7 @@ check_and_source ~/.aliases
 [ -d "$HOME/.local/bin" ] && \
     [[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && \
     export PATH="$HOME/.local/bin:$PATH" # PATH variable
+export ELECTRON_OZONE_PLATFORM_HINT=auto # Compatibilidad electron con Wayland
 
 ### Terminal ###
 check_and_source ~/.zsh-config # Use powerline
