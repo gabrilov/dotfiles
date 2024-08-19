@@ -18,17 +18,13 @@
 # I put the file alacritty.toml in $HOME/.config/alacritty. However it can be kept anywhere among the places mentioned in
 # https://github.com/alacritty/alacritty/tree/master#configuration
 
-# THEME
+# THEME (https://github.com/alacritty/alacritty-theme)
 import = [
     "~/.config/alacritty/themes/pastel_dark.toml"
 ]
 
 [window]
 startup_mode = "Maximized"
-#padding.x = 10
-#padding.y = 10
-#decorations = "Full"
-#decorations_theme_variant = "Light" # "Dark"
 
 [font.bold]
 family = "JetBrainsMono Nerd Font"
