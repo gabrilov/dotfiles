@@ -19,17 +19,17 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 ### Aux function ###
-check_and_source() {
+source_if_exits() {
     [[ -f $1 ]] && source $1
 }
 
 ### Plugins ###
-check_and_source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-check_and_source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-check_and_source ~/.config/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme # Prompt theming
+source_if_exits ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source_if_exits ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source_if_exits ~/.config/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme # Prompt theming
 
 ### Alias ###
-check_and_source ~/.aliases
+source_if_exits ~/.aliases
 
 ### Environment variables ###
 [ -f /usr/bin/nvim ] && export EDITOR=nvim  # Default editor
@@ -39,9 +39,9 @@ check_and_source ~/.aliases
 export ELECTRON_OZONE_PLATFORM_HINT=auto # Compatibilidad electron con Wayland
 
 ### Terminal ###
-check_and_source ~/.zsh-config # Use powerline
-check_and_source ~/.config/zellij/zellij_zsh.sh # load Zellij if exists
-check_and_source ~/.config/poetry/poetry_zsh.sh # poetry autocompletion
-check_and_source ~/.config/kitty/kitty_zsh.sh # load Kitty configuration
-check_and_source ~/.config/zoxide/zoxide_zsh.sh # load zoxide configuration
-check_and_source ~/.p10k.zsh # load p10k config
+source_if_exits ~/.zsh-config # Use powerline
+source_if_exits ~/.config/zellij/zellij_zsh.sh # load Zellij if exists
+source_if_exits ~/.config/poetry/poetry_zsh.sh # poetry autocompletion
+source_if_exits ~/.config/kitty/kitty_zsh.sh # load Kitty configuration
+source_if_exits ~/.config/zoxide/zoxide_zsh.sh # load zoxide configuration
+source_if_exits ~/.p10k.zsh # load p10k config
