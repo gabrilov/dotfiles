@@ -36,5 +36,10 @@
   },
   "relative_line_numbers": true,
   "ui_font_family": "JetBrainsMonoNF-Medium",
-  "current_line_highlight": "gutter"
+  "current_line_highlight": "gutter",
+  "languages": {
+    "Markdown": {
+      "soft_wrap": "editor_width"
+    }
+  }
 }
