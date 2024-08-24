@@ -26,3 +26,12 @@ Este repositorio contiene submódulos. Para descargar los archivos correspondien
 dotfiles submodule init
 dotfiles submodule update
 ```
+Deberá cambiar el nombre de usuario en la ruta del archivo [.gitmodules](../.gitmodules).
+
+```toml
+[submodule "/home/<user>/.config/zsh/plugins/powerlevel10k"]
+    path = /home/<user>/.config/zsh/plugins/powerlevel10k
+    url = https://github.com/romkatv/powerlevel10k.git
+```
+
+De igual manera, en el archivo `config` de la carpeta `.dotfiles`.
