@@ -7,3 +7,6 @@
 [submodule "/home/gabi/.config/zsh/plugins/zsh-autosuggestions"]
 	path = /home/gabi/.config/zsh/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "/home/gabi/.tmux/plugins/tpm"]
+	path = /home/gabi/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
