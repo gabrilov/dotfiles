@@ -1,15 +1,22 @@
 # Atajos de teclado Tmux
 
-| División del panel          |
--------------------------------
-| alt + o | Divide horizontal |
-| alt + i | Divide vertical   |
+### División del panel         
 
-| Navegación |
---------------
+| Atajo              | Acción |
+|--------------------|-------------------|   
+| alt + o            | Divide horizontal |
+| alt + i            | Divide vertical   |
+
+### Navegación entre paneles
+
+| Atajo              | Acción |
+|----------|----------------------|
 | alt + h | Panel de la izquierda |
 | alt + l | Panel de la derecha |
 | alt + k | Panel superior |
 | alt + j | Panel inferior |
+
+
+
 
 
