@@ -1,9 +1,9 @@
 # Atajos de teclado Tmux
 
-| División del panel |
+| División del panel          |
 -------------------------------
 | alt + o | Divide horizontal |
-| alt + i | Divide vertical |
+| alt + i | Divide vertical   |
 
 | Navegación |
 --------------
