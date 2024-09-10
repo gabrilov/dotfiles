@@ -1,10 +1,12 @@
 {
   "editor.tabSize": 2,
   "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "'JetBrainsMono NF'",
+  "terminal.integrated.fontWeight": "normal",
   "window.zoomLevel": 0.5,
   "editor.mouseWheelZoom": true,
   "terminal.integrated.mouseWheelZoom": true,
-  "editor.fontFamily": "JetBrains Nerd Mono Medium",
+  "editor.fontFamily": "'FiraCode Nerd Font'",
   "editor.fontSize": 15,
   "workbench.iconTheme": "material-icon-theme",
   "editor.formatOnSave": true,
@@ -12,7 +14,7 @@
   "editor.lineNumbers": "on",
   "editor.fontLigatures": true,
   "workbench.colorTheme": "GitHub Dark Default",
-  "editor.fontWeight": "500",
+  "editor.fontWeight": "normal",
   "vim.visualModeKeyBindings": [
     {
       "before": [
@@ -58,4 +60,7 @@
   "python.analysis.inlayHints.functionReturnTypes": true,
   "python.analysis.inlayHints.pytestParameters": true,
   "python.analysis.inlayHints.variableTypes": true,
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
 }
