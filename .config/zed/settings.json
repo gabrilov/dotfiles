@@ -40,6 +40,17 @@
   "languages": {
     "Markdown": {
       "soft_wrap": "editor_width"
+    },
+    "Astro": {
+      // "formatter": {
+      //   "external": {
+      //     "command": "prettier",
+      //     "arguments": ["--write", "path}"]
+      //   }
+      // },
+      "format_on_save": "prettier",
+      "soft_wrap": "editor_width"
     }
-  }
+  },
+  "format_on_save": "prettier"
 }
