@@ -11,6 +11,7 @@
   "workbench.iconTheme": "material-icon-theme",
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
+  "editor.wordWrap": "on",
   "editor.fontLigatures": true,
   "workbench.colorTheme": "GitHub Dark Default",
   "editor.fontWeight": "normal",
