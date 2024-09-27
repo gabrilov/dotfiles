@@ -67,5 +67,10 @@
     "*.s3db": "${capture}.${extname}-*"
   },
   "vim.smartRelativeLine": true,
-  "Prettier-SQL.expressionWidth": 200
+  "Prettier-SQL.expressionWidth": 200,
+  "tailwind-fold.foldStyle": "QUOTES",
+  "tailwind-fold.unfoldIfLineSelected": true,
+  "tailwind-fold.showTailwindImage": false,
+  "tailwind-fold.autoFold": false,
+  "tailwind-fold.foldLengthThreshold": 81
 }
